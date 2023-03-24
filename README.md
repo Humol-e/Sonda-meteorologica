@@ -18,3 +18,14 @@ Una vez la sonda recopila el número de datos correctos estos pueden ser utiliza
 
 En síntesis, aqui se subira los códigos relacionados al funcionamiento de la sonda con tal de que sea de código abierto, libre para todos 
 y poder impulsar un proyecto metereológico mas grande.
+
+El índice de temperatura emplea la siguiente formula:
+HI = c1 + c2T + c3R + c4TR + c5T^2 + c6R^2 + c7T^2R + c8TR^2 + c9T^2R^2
+
+Donde:
+
+HI: índice de calor
+T: temperatura en grados Celsius
+R: humedad relativa en porcentaje
+c1-c9: constantes que se utilizan en la fórmula
+En el código proporcionado anteriormente, la función calcularIC() es la encargada de calcular el índice de calor a partir de la temperatura y la humedad relativa medidas por el sensor DHT11.
